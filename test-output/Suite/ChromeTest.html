@@ -1,0 +1,220 @@
+<html>
+<head>
+<title>TestNG:  ChromeTest</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>ChromeTest</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/2/0</td>
+</tr><tr>
+<td>Started on:</td><td>Fri Jan 30 17:04:23 IST 2026</td>
+</tr>
+<tr><td>Total time:</td><td>33 seconds (33696 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='Testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: Testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate the Fashion Functionality", "To validate the flipkart application"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file 
+Host info: host: &apos;MOINUDDIN&apos;, ip: &apos;192.168.68.137&apos;
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:178)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:109)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at Baseclass.DriverFactory.initDriver(DriverFactory.java:26)
+	at hooks.hook.setUp(hook.java:25)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:195)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:213)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	... 8 more
+Caused by: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
+	... 11 more
+Caused by: java.io.IOException: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:506)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 13 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace1936774707", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1936774707'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file 
+Host info: host: &apos;MOINUDDIN&apos;, ip: &apos;192.168.68.137&apos;
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:178)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:109)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at Baseclass.DriverFactory.initDriver(DriverFactory.java:26)
+	at hooks.hook.setUp(hook.java:25)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:195)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:213)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	... 8 more
+Caused by: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
+	... 11 more
+Caused by: java.io.IOException: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:506)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 13 more
+</pre></div></td>
+<td>29</td>
+<td>Testrunner.runner@78ffe6dc</td></tr>
+<tr>
+<td title='Testrunner.runner.runScenario()'><b>runScenario</b><br>Test class: Testrunner.runner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate upto addcart functionality", "To validate the flipkart application"</td>
+<td><div><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file 
+Host info: host: &apos;MOINUDDIN&apos;, ip: &apos;192.168.68.137&apos;
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:178)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:109)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at Baseclass.DriverFactory.initDriver(DriverFactory.java:26)
+	at hooks.hook.setUp(hook.java:25)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:195)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:213)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	... 8 more
+Caused by: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
+	... 11 more
+Caused by: java.io.IOException: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:506)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 13 more
+</pre></div><a href='#' onClick='toggleBox("stack-trace390258679", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace390258679'><pre>org.openqa.selenium.SessionNotCreatedException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure. Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file 
+Host info: host: &apos;MOINUDDIN&apos;, ip: &apos;192.168.68.137&apos;
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [null, newSession {capabilities=[Capabilities {browserName: chrome, goog:chromeOptions: {args: [--start-maximized, --remote-allow-origins=*], extensions: []}}]}]
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:250)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:178)
+	at org.openqa.selenium.chromium.ChromiumDriver.&lt;init&gt;(ChromiumDriver.java:109)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:88)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:83)
+	at org.openqa.selenium.chrome.ChromeDriver.&lt;init&gt;(ChromeDriver.java:72)
+	at Baseclass.DriverFactory.initDriver(DriverFactory.java:26)
+	at hooks.hook.setUp(hook.java:25)
+Caused by: java.io.UncheckedIOException: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:195)
+	at org.openqa.selenium.remote.service.DriverService.start(DriverService.java:213)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:117)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:561)
+	... 8 more
+Caused by: java.io.IOException: Cannot run program &quot;C:\Users\moinu\.cache\selenium\chromedriver\win64\144.0.7559.109\chromedriver.exe&quot;: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1170)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1089)
+	at org.openqa.selenium.os.ExternalProcess$Builder.start(ExternalProcess.java:193)
+	... 11 more
+Caused by: java.io.IOException: CreateProcess error=4551, An Application Control policy has blocked this file
+	at java.base/java.lang.ProcessImpl.create(Native Method)
+	at java.base/java.lang.ProcessImpl.&lt;init&gt;(ProcessImpl.java:506)
+	at java.base/java.lang.ProcessImpl.start(ProcessImpl.java:159)
+	at java.base/java.lang.ProcessBuilder.start(ProcessBuilder.java:1126)
+	... 13 more
+</pre></div></td>
+<td>0</td>
+<td>Testrunner.runner@78ffe6dc</td></tr>
+</table><p>
+</body>
+</html>
