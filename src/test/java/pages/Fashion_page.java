@@ -22,7 +22,7 @@ public class Fashion_page  {
 		se = new seleniumResuable(driver);
 
 	}
-	
+	// xpath for fashion pages
 	@FindBy(xpath="//span[text()='Fashion']") private WebElement Fashionlink;
 	@FindBy(xpath="//a[text()='Kids']")private WebElement Kidslink;
 	@FindBy(xpath="//a[contains(text(),'Girls')]")private WebElement Girls_Dresslink;
