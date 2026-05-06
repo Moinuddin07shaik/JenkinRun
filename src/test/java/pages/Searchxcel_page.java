@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,7 +27,7 @@ public class Searchxcel_page  {
 
 		
 	}
-    @FindBy(xpath="//input[@name='q']") private WebElement searchbox;
+  //  @FindBy(xpath="(//input[@name='q'])[1]") private WebElement searchbox;
     @FindBy(xpath="//div[@id='container']") private  WebElement Homepage;
 
     
@@ -34,9 +35,11 @@ public class Searchxcel_page  {
     	
     	for(int i=1; i<=6;i++) {
     		String value = excel.excelread("Sheet1", i, 0);
+    		WebElement searchbox = se.waitForElement(driver, By.xpath("(//input[@name='q'])[1]"));
     		se.entervalue(searchbox, value);
+    		
     		searchbox.sendKeys(Keys.ENTER);
-    		se.waits();
+    		
     		
     		if(Homepage.isDisplayed()) {
     			excel.excelwrite("Sheet1", i, 1, "PASS");
