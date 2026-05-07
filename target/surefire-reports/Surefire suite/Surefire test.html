@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>Surefire test</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>7/0/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>6/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed May 06 10:39:47 IST 2026</td>
+<td>Started on:</td><td>Thu May 07 09:38:27 IST 2026</td>
 </tr>
-<tr><td>Total time:</td><td>212 seconds (212770 ms)</td>
+<tr><td>Total time:</td><td>218 seconds (218507 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,45 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To Test the search functionality with excell sheet", "To validate the flipkart application"</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//input[@name=&apos;q&apos;])[1] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62527}, goog:processID: 18124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62527/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb654672098aedab7f2d1e0290096993
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at ResusabilityFunctions.seleniumResuable.waitForElement(seleniumResuable.java:152)
+	at pages.Searchxcel_page.Searchwithexcel(Searchxcel_page.java:38)
+	at stepdefination.Searchwithxcell.enter_search_test_in_the_search_field(Searchwithxcell.java:18)
+	at ✽.Enter search test in the search field(file:///C:/Users/moinu/eclipse-workspace/Flipkart/src/test/resources/features/searchfunctionality.feature:63)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1683071624", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1683071624'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: (//input[@name=&apos;q&apos;])[1] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: &apos;4.39.0&apos;, revision: &apos;126f156aee&apos;
+System info: os.name: &apos;Windows 11&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.9&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62527}, goog:processID: 18124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62527/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb654672098aedab7f2d1e0290096993
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at ResusabilityFunctions.seleniumResuable.waitForElement(seleniumResuable.java:152)
+	at pages.Searchxcel_page.Searchwithexcel(Searchxcel_page.java:38)
+	at stepdefination.Searchwithxcell.enter_search_test_in_the_search_field(Searchwithxcell.java:18)
+	at ✽.Enter search test in the search field(file:///C:/Users/moinu/eclipse-workspace/Flipkart/src/test/resources/features/searchfunctionality.feature:63)
+</pre></div></td>
+<td>53</td>
+<td>testrunner.TestRunner@222545dc</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,39 +115,34 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate search functionality with different values", "To validate the flipkart application"</td>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate the search functionality", "To validate the flipkart application"</td>
 <td></td>
-<td>18</td>
+<td>54</td>
 <td>testrunner.TestRunner@222545dc</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate search functionality with different values", "To validate the flipkart application"</td>
 <td></td>
-<td>18</td>
+<td>20</td>
 <td>testrunner.TestRunner@222545dc</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate search functionality with different values", "To validate the flipkart application"</td>
 <td></td>
-<td>22</td>
+<td>20</td>
 <td>testrunner.TestRunner@222545dc</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To get the title and price from search", "To validate the flipkart application"</td>
 <td></td>
-<td>25</td>
-<td>testrunner.TestRunner@222545dc</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate the search functionality", "To validate the flipkart application"</td>
-<td></td>
-<td>49</td>
-<td>testrunner.TestRunner@222545dc</td></tr>
-<tr>
-<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To Test the search functionality with excell sheet", "To validate the flipkart application"</td>
-<td></td>
-<td>55</td>
+<td>26</td>
 <td>testrunner.TestRunner@222545dc</td></tr>
 <tr>
 <td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate search functionality with different values", "To validate the flipkart application"</td>
 <td></td>
-<td>18</td>
+<td>20</td>
+<td>testrunner.TestRunner@222545dc</td></tr>
+<tr>
+<td title='testrunner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: testrunner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "To validate search functionality with different values", "To validate the flipkart application"</td>
+<td></td>
+<td>20</td>
 <td>testrunner.TestRunner@222545dc</td></tr>
 </table><p>
 </body>

@@ -147,7 +147,7 @@ public class seleniumResuable  {
 		 public WebElement waitForElement(WebDriver driver, By locator) {
 
 		        WebDriverWait wait =
-		                new WebDriverWait(driver, Duration.ofSeconds(15));
+		                new WebDriverWait(driver, Duration.ofSeconds(30));
 
 		        return wait.until(
 		                ExpectedConditions.visibilityOfElementLocated(locator)

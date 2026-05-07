@@ -1,4 +1,19 @@
 -------------------------------------------------------------------------------
 Test set: testrunner.TestRunner
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 213.6 s -- in testrunner.TestRunner
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 219.7 s <<< FAILURE! -- in testrunner.TestRunner
+testrunner.TestRunner.runScenario["To Test the search functionality with excell sheet", "To validate the flipkart application"](7) -- Time elapsed: 53.21 s <<< FAILURE!
+org.openqa.selenium.TimeoutException: 
+Expected condition failed: waiting for visibility of element located by By.xpath: (//input[@name='q'])[1] (tried for 15 second(s) with 500 milliseconds interval)
+Build info: version: '4.39.0', revision: '126f156aee'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.9'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 147.0.7727.138, chrome: {chromedriverVersion: 147.0.7727.117 (474cc805edd..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62527}, goog:processID: 18124, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62527/devtoo..., se:cdpVersion: 147.0.7727.138, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: fb654672098aedab7f2d1e0290096993
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at ResusabilityFunctions.seleniumResuable.waitForElement(seleniumResuable.java:152)
+	at pages.Searchxcel_page.Searchwithexcel(Searchxcel_page.java:38)
+	at stepdefination.Searchwithxcell.enter_search_test_in_the_search_field(Searchwithxcell.java:18)
+	at ✽.Enter search test in the search field(file:///C:/Users/moinu/eclipse-workspace/Flipkart/src/test/resources/features/searchfunctionality.feature:63)
+

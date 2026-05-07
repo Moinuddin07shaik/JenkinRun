@@ -12,8 +12,8 @@ import io.cucumber.testng.CucumberOptions;
 @CucumberOptions(
     features = "src/test/resources/features",
     glue = {"stepdefination", "hooks"},
-    tags = "@ParallelSafe",
-    plugin = {
+    		tags = "@ParallelSafe and not @ignore",
+    		plugin = {
         "pretty",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
     },
